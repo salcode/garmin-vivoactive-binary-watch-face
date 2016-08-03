@@ -24,12 +24,32 @@ class binarywatchfaceView extends Ui.WatchFace {
     function onUpdate(dc) {
         // Get and show the current time
         var clockTime = Sys.getClockTime();
-        var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
+        var timeString = Lang.format("$1$\n$2$", [numberToBinaryStr(clockTime.hour), numberToBinaryStr(clockTime.min)]);
         var view = View.findDrawableById("TimeLabel");
         view.setText(timeString);
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+    }
+
+    // Convert number to a string with the binary representation of the string.
+    // @param  number num An integer value from 0 to 63.
+    // @return string The binary string representation of the number.
+    hidden function numberToBinaryStr(num) {
+        var positionValue = 32;
+        var binaryString = "";
+
+        while (positionValue >= 1) {
+            if (num >= positionValue) {
+                num = num - positionValue;
+                binaryString += "1";
+            } else {
+                binaryString += "0";
+            }
+            positionValue = positionValue / 2;
+        }
+
+        return binaryString;
     }
 
     // Called when this View is removed from the screen. Save the
