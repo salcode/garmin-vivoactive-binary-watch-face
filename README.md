@@ -8,6 +8,11 @@ The Garmin vivoactive allows the inclusion of custom code.  In this case, it is 
 - http://developer.garmin.com/connect-iq/api-docs/
 - https://forums.garmin.com/showthread.php?339891-New-Developer-FAQ
 - https://forums.garmin.com/forumdisplay.php?479-Connect-IQ
+- http://developer.garmin.com/connect-iq/developer-tools/functions
+- http://developer.garmin.com/connect-iq/developer-tools/user-interface/
+- https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html
+- https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/System/Stats.html
+- https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics/Dc.html
 
 ## Author Information
 
